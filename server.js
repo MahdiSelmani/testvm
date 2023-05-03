@@ -20,9 +20,9 @@ app.use(cors({
 app.use(express.json());
 app.use('', vmRouter)
 app.use('', loginRouter)
-app.use('', express.static('dist/restartVm'))
+app.use('', express.static('dist/restartvm'))
 app.get('*', (req,res)=> {
-    res.sendFile(path.resolve('dist/restartVm/index.html'))
+    res.sendFile(path.resolve('dist/restartvm/index.html'))
 })
 
 
